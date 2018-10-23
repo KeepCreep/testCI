@@ -1,0 +1,26 @@
+
+{
+    "appTestApp": {
+        "meal" : {
+            "home": {
+                "title": "Meals",
+                "createLabel": "Créer un nouveau Meal",
+                "createOrEditLabel": "Créer ou éditer un Meal"
+            },
+            "created": "Un nouveau Meal a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Meal avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Meal avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Meal {{ id }} ?"
+            },
+            "detail": {
+                "title": "Meal"
+            },
+            "name": "Name",
+            "description": "Description",
+            "kcal": "Kcal",
+            "picture": "Picture",
+            "restaurant": "Restaurant"
+        }
+    }
+}

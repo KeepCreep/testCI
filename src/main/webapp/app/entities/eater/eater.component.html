@@ -1,0 +1,58 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="appTestApp.eater.home.title">Eaters</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-eater" [routerLink]="['/eater/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="appTestApp.eater.home.createLabel">
+            Create new Eater
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="eaters">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="appTestApp.eater.pseudo">Pseudo</span></th>
+            <th><span jhiTranslate="appTestApp.eater.firstName">First Name</span></th>
+            <th><span jhiTranslate="appTestApp.eater.lastName">Last Name</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let eater of eaters ;trackBy: trackId">
+                <td><a [routerLink]="['/eater', eater.id, 'view' ]">{{eater.id}}</a></td>
+                <td>{{eater.pseudo}}</td>
+                <td>{{eater.firstName}}</td>
+                <td>{{eater.lastName}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/eater', eater.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/eater', eater.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'eater/'+ eater.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+
+{
+    "appTestApp": {
+        "eater" : {
+            "home": {
+                "title": "Eaters",
+                "createLabel": "Créer un nouveau Eater",
+                "createOrEditLabel": "Créer ou éditer un Eater"
+            },
+            "created": "Un nouveau Eater a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Eater avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Eater avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Eater {{ id }} ?"
+            },
+            "detail": {
+                "title": "Eater"
+            },
+            "pseudo": "Pseudo",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "commands": "Commands"
+        }
+    }
+}

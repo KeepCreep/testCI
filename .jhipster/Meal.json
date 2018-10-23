@@ -1,0 +1,39 @@
+{
+    "name": "Meal",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "kcal",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "picture",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "restaurant",
+            "otherEntityName": "restaurant",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "meal"
+        }
+    ],
+    "changelogDate": "20181009074444",
+    "entityTableName": "meal",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

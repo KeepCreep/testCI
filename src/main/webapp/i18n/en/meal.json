@@ -1,0 +1,26 @@
+
+{
+    "appTestApp": {
+        "meal" : {
+            "home": {
+                "title": "Meals",
+                "createLabel": "Create a new Meal",
+                "createOrEditLabel": "Create or edit a Meal"
+            },
+            "created": "A new Meal is created with identifier {{ param }}",
+            "updated": "A Meal is updated with identifier {{ param }}",
+            "deleted": "A Meal is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Meal {{ id }}?"
+            },
+            "detail": {
+                "title": "Meal"
+            },
+            "name": "Name",
+            "description": "Description",
+            "kcal": "Kcal",
+            "picture": "Picture",
+            "restaurant": "Restaurant"
+        }
+    }
+}

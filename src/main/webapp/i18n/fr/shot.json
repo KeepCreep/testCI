@@ -1,0 +1,25 @@
+
+{
+    "appTestApp": {
+        "shot" : {
+            "home": {
+                "title": "Shots",
+                "createLabel": "Créer un nouveau Shot",
+                "createOrEditLabel": "Créer ou éditer un Shot"
+            },
+            "created": "Un nouveau Shot a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Shot avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Shot avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Shot {{ id }} ?"
+            },
+            "detail": {
+                "title": "Shot"
+            },
+            "numberOfMeal": "Number Of Meal",
+            "eater": "Eater",
+            "meal": "Meal",
+            "command": "Command"
+        }
+    }
+}

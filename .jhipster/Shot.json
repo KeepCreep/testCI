@@ -1,0 +1,38 @@
+{
+    "name": "Shot",
+    "fields": [
+        {
+            "fieldName": "numberOfMeal",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "eater",
+            "otherEntityName": "eater",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "meal",
+            "otherEntityName": "meal",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "command",
+            "otherEntityName": "command",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181009074446",
+    "entityTableName": "shot",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

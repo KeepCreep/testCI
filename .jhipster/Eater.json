@@ -1,0 +1,34 @@
+{
+    "name": "Eater",
+    "fields": [
+        {
+            "fieldName": "pseudo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "commands",
+            "otherEntityName": "command",
+            "otherEntityRelationshipName": "author"
+        }
+    ],
+    "changelogDate": "20181009074443",
+    "entityTableName": "eater",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

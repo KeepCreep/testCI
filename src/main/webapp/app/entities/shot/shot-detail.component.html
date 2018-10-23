@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="shot">
+            <h2><span jhiTranslate="appTestApp.shot.detail.title">Shot</span> {{shot.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="appTestApp.shot.numberOfMeal">Number Of Meal</span></dt>
+                <dd>
+                    <span>{{shot.numberOfMeal}}</span>
+                </dd>
+                <dt><span jhiTranslate="appTestApp.shot.eater">Eater</span></dt>
+                <dd>
+                    <div *ngIf="shot.eater">
+                        <a [routerLink]="['/eater', shot.eater?.id, 'view']">{{shot.eater?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="appTestApp.shot.meal">Meal</span></dt>
+                <dd>
+                    <div *ngIf="shot.meal">
+                        <a [routerLink]="['/meal', shot.meal?.id, 'view']">{{shot.meal?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="appTestApp.shot.command">Command</span></dt>
+                <dd>
+                    <div *ngIf="shot.command">
+                        <a [routerLink]="['/command', shot.command?.id, 'view']">{{shot.command?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/shot', shot.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

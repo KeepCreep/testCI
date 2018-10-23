@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Shot.
+    -->
+    <changeSet id="20181009074446-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="eater_id"
+                                 baseTableName="shot"
+                                 constraintName="fk_shot_eater_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="eater"/>
+
+        <addForeignKeyConstraint baseColumnNames="meal_id"
+                                 baseTableName="shot"
+                                 constraintName="fk_shot_meal_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meal"/>
+
+        <addForeignKeyConstraint baseColumnNames="command_id"
+                                 baseTableName="shot"
+                                 constraintName="fk_shot_command_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="command"/>
+
+    </changeSet>
+</databaseChangeLog>
